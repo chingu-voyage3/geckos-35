@@ -5,13 +5,14 @@
   "author": "geckos-35",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev":
+      "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "runserver": "cd server && npm run dev",
     "serve": "npm run dev",
     "start": "run-p runserver serve",
     "surge": "npm run build && surge --project ./dist --domain potify.surge.sh",
-    "heroku": "git subtree push --prefix server heroku master",
+    "heroku": "cd server && npm run heroku",
     "postinstall": "cd server && npm install"
   },
   "dependencies": {
@@ -57,9 +58,5 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }

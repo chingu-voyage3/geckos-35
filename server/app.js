@@ -13,14 +13,11 @@ const port = process.env.PORT || 3000;
 const dbUrl = 'mongodb://chingus:chingus99@ds135196.mlab.com:35196/potify';
 // const dbUrl = 'mongodb://localhost:27017/potify';
 
-app.use(expressSession({ secret: 'chingusVoyage3' }));
-app.use(require('cors')());
-
 if (env.trim() === 'development') {
   app.use(require('morgan')('dev'));
 }
-
 app.use(bodyParser.json());
+app.use(require('cors')());
 
 mongoose.connect(dbUrl, {
   useMongoClient: true
