@@ -1,1 +1,7 @@
-# geckos-35
+# Spotify Clone
+
+## geckos-35
+
+## Members
+
+> @sermetege
