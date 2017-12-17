@@ -15,9 +15,7 @@
           <span>Search</span>
         </div>
           <svg class="navbar__searchLogo icon-search"><use xlink:href="#icon-search"></use></svg>
-
       </div>
-
       <div class="navbar__page ">
         <div class="navbar__item navbar__home navbar__list--clickable">
           Home
@@ -68,8 +66,6 @@
     background-color: rgba(24, 24, 24, 0.5);
     color:$main-text-color;
     letter-spacing: .015em;
-
-
     &__list {
       display:flex;
       position: relative;
@@ -86,7 +82,6 @@
     }
     &__item {
       margin-top: 20px;
-
     }
     &__logo {
         display: inline-block;
@@ -95,8 +90,8 @@
         stroke-width: 0;
         stroke: currentColor;
         fill: $second-text-color;
-
     }
+
     &__search{
       display: flex;
       justify-content: flex-start;
@@ -109,6 +104,7 @@
       font-weight: $font-weight-bold;
       font-size:$font-size-big;
     }
+
     &__searchLogo {
       margin-left: auto;
         display: inline-block;
@@ -185,6 +181,5 @@
       font-size:$font-size-normal;
       font-weight: $font-weight-thick;
     }
-
 }
 </style>
