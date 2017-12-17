@@ -47,8 +47,9 @@
         </div>
       </div>
       <div class="player__progress">
-          <input class="player__range" type="range" value="100" min="0" max="500">
-          <span class="player__rangevalue"></span>
+        <div class="player__startvalue">00:00</div>
+        <input class="player__range" type="range" value="100" min="0" max="500">
+        <span class="player__endvalue">00:00</span>
       </div>
     </div>
     <div class="player__volume">
@@ -131,7 +132,7 @@
     }
     &__controlbuttons {
       width: 100%;
-      height: 120px;
+      height: 170px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -174,33 +175,35 @@
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     &__range{
       -webkit-appearance: none;
-      width: 60%;
-      height: 3px;
-      background: #777777;
+      width: 55%;
+      height: 4px;
+      background-color: #777777;
       outline: none;
       opacity: 0.7;
       -webkit-transition: .2s;
       transition: opacity .2s;
       border-radius: 50px;
       &:hover {
+        background-color: $third-text-color;
         &::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 10px;
-          height: 10px;
-          background: #4CAF50;
-          cursor: pointer;
+          width:15px;
+          height: 15px;
+          border: 1px solid blue;
           border-radius: 50%;
+          background: #fff;
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
         }
       }
-      &::-webkit-slider-thumb {
-        display: none;
+      &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 0;
+        height: 0;
       }
-
     }
 
 
