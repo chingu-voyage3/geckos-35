@@ -1350,9 +1350,10 @@
     flex-direction: column;
     align-items: flex-start;
     left:220px;
-    height: 85%;
-    width: 83%;
+    height: 84%;
+    width: calc(100% - 220px);
     overflow: scroll;
+    overflow-x: hidden;
     z-index: $z-index-content;
   }
 
@@ -1409,8 +1410,8 @@
     &__item {
       display: flex;
       flex-direction: column;
-      width:140px;
-      height:170px;
+      width:178px;
+      height:213px;
       margin-right: 20px;
       margin-bottom: 20px;
       pointer-events: all;
@@ -1418,6 +1419,9 @@
         cursor: pointer;
         .card__layer {
           background-color: rgba(0, 0, 0, 0.7);
+        }
+        .card__icon {
+          display:inline-block;
         }
       }
     }
@@ -1452,7 +1456,7 @@
     }
 
     .card__icon {
-      display: inline-block;
+      display: none;
       width: 40px;
       height: 40px;
       stroke-width: 0;
