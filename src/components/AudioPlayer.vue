@@ -52,8 +52,10 @@
         <span class="player__endvalue">00:00</span>
       </div>
     </div>
-    <div class="player__volume">
-
+    <div class="player__volume player__controlbuttons">
+      <div class="player__buttoncontainer"><svg class="player_loop icon-loop2"><use xlink:href="#icon-loop2"></use></svg>
+      </div>
+      <input class="player__range" type="range" value="100" min="0" max="500">
     </div>
   </div>
 </template>
@@ -208,6 +210,8 @@
 
 
     &__volume{
+      display: flex;
+      justify-content: flex-start;
       height:100%;
       margin-left: auto;
       width:220px;
